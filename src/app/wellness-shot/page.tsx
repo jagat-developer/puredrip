@@ -18,11 +18,15 @@ export default function WellnessShotPage() {
           <Reveal>
             <p className="eyebrow">Wellness Shots</p>
             <h1 className="mt-5 font-serif fluid-hero text-ink">
-              A fast lift, <em className="italic">delivered in minutes.</em>
+              Targeted Wellness <em className="italic">in Minutes</em>
             </h1>
             <p className="mt-6 max-w-xl text-base font-light leading-8 text-ink-soft sm:text-lg">
-              Intramuscular shots for the days you need a focused, fast-acting boost — energy,
-              immunity, mood, glow. Add one to any IV session, or book as a stand-alone visit.
+              Intramuscular wellness shots designed for the days you need focused nutritional
+              support. From energy and immunity to recovery and glow, each shot is selected to
+              complement your individual wellness goals.
+            </p>
+            <p className="mt-4 max-w-xl text-base font-light leading-8 text-ink-soft sm:text-lg">
+              Add one to any IV session or book as a convenient stand-alone appointment.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Magnetic>
@@ -57,7 +61,7 @@ export default function WellnessShotPage() {
               eyebrow="Menu"
               title="The shot menu."
               italic="menu."
-              summary="All shots are administered by a registered nurse. Pre-order items are added as scheduling allows — reach out to confirm availability."
+              summary="Each shot is administered by registered and licensed nurses with care and precision. Pre-order options are available as scheduling allows. Contact us to confirm availability."
             />
           </Reveal>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -72,39 +72,121 @@ export const heroBenefits: Benefit[] = [
   },
 ];
 
+export const ivBenefits: DripCategory[] = [
+  {
+    title: "Hydration & Recovery",
+    body: "Replenish fluids and essential nutrients to support recovery after workouts, travel, busy schedules, or moments when your body needs extra care.",
+  },
+  {
+    title: "Energy & Focus",
+    body: "Nourish your body with targeted nutrients to support steady energy, mental clarity, and everyday performance.",
+  },
+  {
+    title: "Immune & Wellness Support",
+    body: "Give your body nutritional support during demanding seasons and maintain your wellness routine with personalized IV therapy.",
+  },
+  {
+    title: "Skin & Glow",
+    body: "Support a healthy, radiant complexion from within, with carefully selected nutrients that complement your natural glow.",
+  },
+  {
+    title: "Balance & Resilience",
+    body: "Support your body through periods of fatigue, stress, and changing wellness needs.",
+  },
+];
+
 export const pillars: Pillar[] = [
   {
-    title: "Recharge anywhere",
-    body: "Home, office, hotel, event — we bring the clinic to you. No commute, no waiting room, no recovery time on the other side.",
+    title: "Recharge Anywhere",
+    body: "Whether you're at home, in the office, staying at a hotel, or hosting an event, we bring premium IV therapy directly to you.",
   },
   {
-    title: "Science-backed",
-    body: "Every drip is built on clinical evidence. Our pharmacist-led formulations are dosed to the standards a hospital pharmacy would recognise.",
+    title: "Science-Backed",
+    body: "Every treatment is designed with carefully selected, high-quality ingredients and guided by current clinical evidence to help you feel your best.",
   },
   {
-    title: "Custom wellness",
-    body: "No two bodies are the same. Every session begins with a short intake so the drip you receive is the drip your body needs.",
+    title: "Custom Wellness",
+    body: "Your wellness is personal. That's why every visit includes a comprehensive assessment to create a treatment plan tailored specifically to you.",
   },
   {
-    title: "Professional care",
-    body: "Treatment is delivered by registered nurses and an LPN under pharmacist oversight. Sterile technique, every visit.",
+    title: "Professional Care",
+    body: "Receive exceptional care from licensed nurses who prioritize safety, comfort, and clinical excellence from start to finish.",
+  },
+];
+
+export const aboutPrinciples: Pillar[] = [
+  {
+    title: "Burnout Shouldn't Be the Standard",
+    body: "Life can be demanding, but constantly running on empty shouldn't feel normal. We believe wellness is about taking time to restore, recharge, and care for yourself before burnout takes over.",
+  },
+  {
+    title: "Safety & Comfort Come First",
+    body: "Your safety and comfort are our priority at every step. From thorough screening and professional nursing care to sterile technique and attention to detail, every visit is designed with your well-being in mind.",
+  },
+  {
+    title: "No Exaggerated Promises, Just Thoughtful Care",
+    body: "We believe in honest, evidence-informed wellness. No unrealistic claims, no overpromising, just carefully selected treatments designed to support your individual goals.",
+  },
+  {
+    title: "No Two Bodies Are the Same",
+    body: "Every person has unique needs, goals, and experiences. That's why we take the time to understand your wellness priorities and create an experience that is personalized to you.",
   },
 ];
 
 export const ivProcess: ProcessStep[] = [
-  { index: "01", title: "Book & connect", body: "Choose a time on JaneApp. We confirm within the hour and send a short pre-visit guide." },
-  { index: "02", title: "Quick intake", body: "A two-minute intake captures your goals, medical history, and any current medications." },
-  { index: "03", title: "Personal consultation", body: "On arrival, your nurse reviews intake, answers questions, and finalises the formula." },
-  { index: "04", title: "We come to you", body: "Treatment in your chosen space — couch, office chair, hotel room, event suite. Setup is calm and clinical." },
-  { index: "05", title: "Relax & recharge", body: "Forty-five minutes to an hour, monitored throughout. Most clients feel the lift before the drip is done." },
-  { index: "06", title: "Ongoing support", body: "Follow-up notes the next day, plus tailored recommendations for the next session if you want one." },
+  {
+    index: "01",
+    title: "Book & connect",
+    body: "Choose your preferred time through JaneApp. We'll confirm your appointment and guide you through a seamless experience from booking to arrival.",
+  },
+  {
+    index: "02",
+    title: "Personal wellness intake",
+    body: "A brief intake helps us understand your wellness goals, health history, and individual needs before your session.",
+  },
+  {
+    index: "03",
+    title: "Personalized consultation",
+    body: "Your nurse will review your intake, answer any questions, and help tailor your treatment to align with your wellness goals.",
+  },
+  {
+    index: "04",
+    title: "We come to you",
+    body: "Enjoy a premium IV therapy experience in the comfort of your chosen space, whether that's your home, office, hotel, or private event setting.",
+  },
+  {
+    index: "05",
+    title: "Relax & recharge",
+    body: "Settle in while your treatment is administered with attentive care and ongoing monitoring. Take this time to relax, reset, and recharge.",
+  },
+  {
+    index: "06",
+    title: "Continued wellness support",
+    body: "Receive post-treatment guidance and personalized recommendations to support your ongoing wellness journey.",
+  },
 ];
 
 export const eventsProcess: ProcessStep[] = [
-  { index: "01", title: "Share your details", body: "Tell us the date, headcount, and what you'd like everyone to leave feeling. We'll suggest a menu." },
-  { index: "02", title: "We arrive ready", body: "A nurse-led team brings everything — drips, shots, chairs, sanitised supplies. You host, we set up." },
-  { index: "03", title: "Quick consultation", body: "Each guest gets a private one-minute intake before treatment. Privacy and consent, every time." },
-  { index: "04", title: "Enjoy the experience", body: "Hydration, glow, recovery — delivered as part of the event, not a clinical interruption to it." },
+  {
+    index: "01",
+    title: "Tell us about your event",
+    body: "Share your date, guest count, location, and the experience you're envisioning. We'll help curate the right options for your group.",
+  },
+  {
+    index: "02",
+    title: "We handle the details",
+    body: "Our nurse-led team arrives fully prepared with everything needed for a smooth, discreet setup. From supplies to service flow, we take care of the details so you can focus on your guests.",
+  },
+  {
+    index: "03",
+    title: "Personalized guest experience",
+    body: "Each guest receives an individual wellness assessment before treatment, ensuring a comfortable experience tailored to their needs.",
+  },
+  {
+    index: "04",
+    title: "Relax and enjoy the moment",
+    body: "Your guests enjoy premium IV therapy as a seamless part of the celebration, retreat, or gathering, enhancing the experience without taking away from it.",
+  },
 ];
 
 export const eventDripCategories: DripCategory[] = [
@@ -214,7 +296,7 @@ export const memberships: MembershipTier[] = [
 export const faqs: FaqItem[] = [
   {
     q: "Who administers the IV?",
-    a: "Every session is led by a registered nurse or LPN under pharmacist oversight. We follow sterile technique on every visit, and our team carries the full scope of training expected in a hospital infusion setting.",
+    a: "Every session is led by experienced nurses with pharmacist and clinical oversight, thoughtful clinical practices, and a focus on your safety and comfort. Every visit is delivered with attention to detail, professionalism, and the highest standards of care.",
   },
   {
     q: "Where can you come?",
@@ -242,7 +324,7 @@ export const faqs: FaqItem[] = [
   },
 ];
 
-const HERO_IMAGE = "/images/hero-sauna.webp";
+const HERO_IMAGE = "/images/pure-drip-treatment-hero.jpg";
 const WELCOME_IMAGE = "/images/nurse-care.jpg";
 const SCIENCE_IMAGE = "/images/nurse-iv-setup.jpg";
 const RECOVERY_IMAGE = "/images/nurse-care.jpg";

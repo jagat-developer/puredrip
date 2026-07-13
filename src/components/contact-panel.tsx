@@ -15,9 +15,9 @@ export function ContactPanel() {
             Reserve <em className="italic">your drip.</em>
           </h2>
           <p className="mt-6 max-w-xl text-base font-light leading-8 text-ink-soft">
-            Tell us what you&apos;re looking for — a single session, a private event, or full
-            membership — and we&apos;ll reply within one business day with availability and a
-            tailored plan.
+            Ready to begin your wellness journey? Tell us what you&apos;re looking for, from a
+            single session to a private event or membership, and we&apos;ll be in touch within one
+            business day with availability and next steps.
           </p>
           <p className="mt-4 max-w-xl text-sm font-light leading-7 text-ink-soft">
             Prefer the fastest path? Book directly on JaneApp, or use the form for custom timing,

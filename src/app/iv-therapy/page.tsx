@@ -7,7 +7,7 @@ import { ProcessRail } from "@/components/process-rail";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { TiltCard } from "@/components/tilt-card";
-import { company, heroBenefits, images, ivProcess, pageSeo } from "@/lib/site-data";
+import { company, images, ivBenefits, ivProcess, pageSeo } from "@/lib/site-data";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata(pageSeo["iv-therapy"]);
@@ -23,9 +23,9 @@ export default function IvTherapyPage() {
               Nurse-led IV therapy, <em className="italic">delivered to you.</em>
             </h1>
             <p className="mt-6 max-w-xl text-base font-light leading-8 text-ink-soft sm:text-lg">
-              Hydration, energy, recovery, and glow — every drip is built on clinical evidence,
-              dosed by a registered pharmacist, and administered by a registered nurse in the space
-              you choose.
+              Hydration, energy, recovery, and glow. Personalized treatments featuring
+              thoughtfully sourced ingredients, evidence-informed practices, and professional
+              nursing care in the comfort of your own space.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Magnetic>
@@ -55,19 +55,38 @@ export default function IvTherapyPage() {
 
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
         <Reveal>
+          <div className="max-w-3xl">
+            <h2 className="font-serif fluid-h2 text-ink">What Is IV Therapy?</h2>
+            <div className="mt-8 space-y-6 text-base font-light leading-8 text-ink-soft sm:text-lg">
+              <p>
+                IV therapy is a personalized wellness treatment that delivers fluids, vitamins,
+                and minerals directly into the bloodstream, bypassing the digestive system for
+                efficient delivery and hydration support.
+              </p>
+              <p>
+                When nutrients are taken orally, they must travel through the digestive tract
+                before they can be absorbed and utilized by the body. Factors such as digestion,
+                nutrient breakdown, and individual absorption can influence how much is available
+                to the body. IV therapy provides a direct method of delivering hydration and
+                nutrients into the bloodstream, allowing faster and better absorption.
+              </p>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
+        <Reveal>
           <SectionHeading
             eyebrow="Benefits"
-            title="What our drips deliver."
-            italic="deliver."
-            summary="Same intake, different formula. Every session is matched to your goals on the day."
+            title="Why Clients Choose IV Therapy"
           />
         </Reveal>
-        <div className="mt-16 grid gap-px overflow-hidden rounded-md border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-4">
-          {heroBenefits.map((benefit, idx) => (
-            <Reveal key={benefit.eyebrow} delay={idx * 0.05}>
+        <div className="mt-16 grid gap-px overflow-hidden rounded-md border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-3">
+          {ivBenefits.map((benefit, idx) => (
+            <Reveal key={benefit.title} delay={idx * 0.05}>
               <TiltCard className="h-full" max={3}>
                 <article className="flex h-full flex-col gap-4 bg-background p-8">
-                  <p className="eyebrow">{benefit.eyebrow}</p>
                   <h3 className="font-serif text-2xl text-ink">{benefit.title}</h3>
                   <p className="text-sm font-light leading-7 text-ink-soft">{benefit.body}</p>
                 </article>
@@ -75,15 +94,22 @@ export default function IvTherapyPage() {
             </Reveal>
           ))}
         </div>
+        <Reveal delay={0.1}>
+          <p className="mt-10 max-w-3xl text-base font-light leading-8 text-ink-soft sm:text-lg">
+            At Pure Drip, every IV therapy session is personalized, professional, and delivered
+            with care. We bring a seamless wellness experience to you, helping you feel restored,
+            refreshed, and ready for what&apos;s ahead.
+          </p>
+        </Reveal>
       </section>
 
       <div id="process">
         <ProcessRail
           steps={ivProcess}
           eyebrow="How it works"
-          title="Six simple steps from book to recharge."
-          italic="recharge."
-          summary="Every Pure Drip session follows the same calm, clinical rhythm — from your first booking to the follow-up the next day."
+          title="Six simple steps from booking to feeling your best."
+          italic="feeling your best."
+          summary="Every Pure Drip session is designed with intention, guiding you through a seamless wellness experience from your first booking to your post-treatment follow-up."
         />
       </div>
 

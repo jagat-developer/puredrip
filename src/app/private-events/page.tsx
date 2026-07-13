@@ -30,12 +30,16 @@ export default function PrivateEventsPage() {
           <Reveal>
             <p className="eyebrow">Private Events</p>
             <h1 className="mt-5 font-serif fluid-hero text-ink">
-              Bring the clinic <em className="italic">to your celebration.</em>
+              Elevate Your Event with <em className="italic">On-Site Wellness</em>
             </h1>
             <p className="mt-6 max-w-2xl text-base font-light leading-8 text-ink-soft sm:text-lg">
-              Bridal parties. Corporate offsites. Milestone weekends. Retreat groups. We bring a
-              nurse-led team, every supply, and a discreet set-up that fits the room you&apos;re
-              already in.
+              Create an unforgettable experience for your guests with private, nurse-led IV
+              therapy delivered directly to your celebration.
+            </p>
+            <p className="mt-4 max-w-2xl text-base font-light leading-8 text-ink-soft sm:text-lg">
+              From bachelorette parties and weekend getaways to corporate retreats or special
+              celebrations, we offer a wide range of options to suit your group&apos;s needs, from
+              classic favorites to custom blends.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Magnetic>
@@ -77,9 +81,9 @@ export default function PrivateEventsPage() {
       <ProcessRail
         steps={eventsProcess}
         eyebrow="How it works"
-        title="From inquiry to event day."
-        italic="event day."
-        summary="A four-step rhythm that keeps everything calm — yours to host, ours to deliver."
+        title="From Inquiry to Event Day"
+        italic="Event Day"
+        summary="A seamless experience designed to keep planning effortless. You host the occasion, and we take care of the wellness experience."
       />
 
       <ContactPanel />

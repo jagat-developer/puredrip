@@ -43,7 +43,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src={images.hero}
-            alt="A calm infrared therapy session — Pure Drip&apos;s elevated wellness experience"
+            alt="Two Pure Drip clients relaxing during a mobile IV therapy session"
             fill
             priority
             sizes="100vw"
@@ -102,8 +102,7 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="font-serif fluid-h2 text-ink">
-              Nova Scotia&apos;s first <em className="italic">mobile</em> IV therapy clinic, meeting
-              you both physically and emotionally, wherever you are.
+              Luxury IV therapy, delivered wherever you are. Body restored. Mind renewed.
             </h2>
           </Reveal>
         </div>
@@ -117,7 +116,7 @@ export default function HomePage() {
               eyebrow="Feel the difference"
               title="Hydration with intention."
               italic="intention."
-              summary="From recovery to prevention, our IV therapy and vitamin shots are thoughtfully chosen to support your body through whatever season of life you're in."
+              summary="Feel better, faster. Our personalized IV therapy and vitamin shots deliver essential hydration and nutrients directly into your bloodstream to support energy, recovery, immunity, and overall wellness."
             />
           </Reveal>
           <div className="mt-16 grid gap-px overflow-hidden rounded-md border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-4">
