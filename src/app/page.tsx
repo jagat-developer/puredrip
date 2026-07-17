@@ -142,7 +142,7 @@ export default function HomePage() {
         italic="anywhere"
         body="Home, office, hotel, or event. We bring the full clinic to your space, set up with the same sterile technique you&apos;d find in a hospital infusion suite. No commute, no waiting room, no recovery time afterward."
         image={images.welcome}
-        imageAlt="Calm interior set up for a mobile IV therapy session"
+        imageAlt="A Pure Drip client relaxing during a mobile IV therapy session"
       />
       <ImagePair
         eyebrow="Science-backed"
@@ -150,7 +150,7 @@ export default function HomePage() {
         italic="feel."
         body="Every formula is built on clinical evidence and dosed by a registered pharmacist. The B-complex and amino blends restore the metabolic supply your body actually runs on — not a caffeine spike that crashes by mid-afternoon."
         image={images.science}
-        imageAlt="Clinical glassware reflecting Pure Drip's pharmacy-grade approach"
+        imageAlt="Branded Pure Drip IV infusion bags prepared on a stand"
         reverse
       />
       <ImagePair
@@ -159,7 +159,7 @@ export default function HomePage() {
         italic="same."
         body="Every session begins with a short intake so the drip you receive is the drip your body needs. Recovery, energy, glow, immunity — the formula meets you where you are."
         image={images.recovery}
-        imageAlt="A relaxed recovery setting reflecting personalized wellness"
+        imageAlt="A Pure Drip client relaxing in a robe during a treatment"
       />
 
       {/* Pillars (concise) */}
@@ -224,7 +224,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src={images.glow}
-            alt="A bright still life reflecting Pure Drip's energy and glow"
+            alt="A Pure Drip Glow infusion bag"
             fill
             sizes="100vw"
             className="object-cover opacity-40"

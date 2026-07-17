@@ -324,16 +324,17 @@ export const faqs: FaqItem[] = [
   },
 ];
 
-const HERO_IMAGE = "/images/pure-drip-treatment-hero.jpg";
-const WELCOME_IMAGE = "/images/nurse-care.jpg";
-const SCIENCE_IMAGE = "/images/nurse-iv-setup.jpg";
-const RECOVERY_IMAGE = "/images/nurse-care.jpg";
-const GLOW_IMAGE = "/images/hero-sauna.webp";
-const TEAM_IMAGE = "/images/nurse-care.jpg";
-const EVENT_IMAGE = "/images/nurse-iv-setup.jpg";
-const CLUB_IMAGE = "/images/hero-sauna.webp";
-const SHOT_IMAGE = "/images/nurse-iv-setup.jpg";
-const LOCATION_IMAGE = "/images/hero-sauna.webp";
+const HERO_IMAGE = "/images/pure-drip-hero-session.jpg";
+const WELCOME_IMAGE = "/images/pure-drip-welcome-session.jpg";
+const SCIENCE_IMAGE = "/images/pure-drip-iv-bags.jpg";
+const RECOVERY_IMAGE = "/images/pure-drip-recovery-client.jpg";
+const GLOW_IMAGE = "/images/pure-drip-glow-infusion.jpg";
+const TEAM_IMAGE = "/images/pure-drip-treatment-closeup.jpg";
+const FOUNDER_IMAGE = "/images/pure-drip-founder.jpg";
+const EVENT_IMAGE = "/images/pure-drip-event-session.jpg";
+const CLUB_IMAGE = "/images/pure-drip-club-comfort.jpg";
+const SHOT_IMAGE = "/images/pure-drip-wellness-shots.jpg";
+const LOCATION_IMAGE = "/images/pure-drip-brochures.jpg";
 
 export const images = {
   hero: HERO_IMAGE,
@@ -342,6 +343,7 @@ export const images = {
   recovery: RECOVERY_IMAGE,
   glow: GLOW_IMAGE,
   team: TEAM_IMAGE,
+  founder: FOUNDER_IMAGE,
   event: EVENT_IMAGE,
   club: CLUB_IMAGE,
   shot: SHOT_IMAGE,
@@ -419,7 +421,7 @@ export const pageSeo: Record<string, SeoPage> = {
     description:
       "Founded by LPN Daman Kaur, Pure Drip is Nova Scotia's first mobile IV therapy clinic — nurse-led, pharmacist-overseen, and built around your wellness.",
     keywords: ["pure drip about", "daman kaur halifax", "mobile iv halifax team"],
-    image: TEAM_IMAGE,
+    image: FOUNDER_IMAGE,
     priority: 0.7,
   }),
   location: buildSeo({

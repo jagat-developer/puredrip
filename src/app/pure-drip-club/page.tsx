@@ -17,7 +17,7 @@ export default function PureDripClubPage() {
         <div className="absolute inset-0">
           <Image
             src={images.club}
-            alt="An elevated still life reflecting the Pure Drip Club experience"
+            alt="Pure Drip branded pillow and blanket in a comfortable treatment setting"
             fill
             sizes="100vw"
             className="object-cover opacity-40"

@@ -42,7 +42,7 @@ export default function IvTherapyPage() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-surface-3 lg:h-[32rem] lg:max-h-[62vh] lg:aspect-auto xl:h-[34rem]">
               <Image
                 src={images.science}
-                alt="Clinical setup for an in-home Pure Drip session"
+                alt="Branded Pure Drip IV infusion bags on an IV stand"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -119,7 +119,7 @@ export default function IvTherapyPage() {
         italic="you."
         body="Specific formulas are matched to your intake. If you have a target — recovery, glow, energy, immune support — tell us at booking and we'll bring the right combination. For specific drip availability and pricing, reach out and we'll share the current menu."
         image={images.team}
-        imageAlt="A Pure Drip nurse preparing an in-home session"
+        imageAlt="A Pure Drip treatment close-up with branded comfort pillow"
         reverse
       />
 

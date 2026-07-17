@@ -26,8 +26,8 @@ export default function AboutPage() {
           <Reveal delay={0.1}>
             <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-surface-3">
               <Image
-                src={images.team}
-                alt="Pure Drip founder and team"
+                src={images.founder}
+                alt="Daman Kaur, LPN, founder of Pure Drip"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

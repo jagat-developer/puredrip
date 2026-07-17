@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-labelledby="title">
+  <title id="title">Pure Drip</title>
+  <rect width="360" height="96" rx="0" fill="#f8f4ed"/>
+  <text x="28" y="61" fill="#0f2f4a" font-family="Georgia, 'Times New Roman', serif" font-size="42" letter-spacing="-1">
+    Pure<tspan font-style="italic">Drip</tspan>
+  </text>
+  <path d="M305 24c11 14 21 27 21 39 0 13-9 22-21 22s-21-9-21-22c0-12 10-25 21-39Z" fill="#6fb7df"/>
+</svg>

@@ -27,7 +27,7 @@ export default function LocationPage() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-surface-3">
               <Image
                 src={images.location}
-                alt="Halifax coastline reflecting Pure Drip's service area"
+                alt="Pure Drip brochures with booking details"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
