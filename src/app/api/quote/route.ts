@@ -1,5 +1,6 @@
 import { company } from "@/lib/site-data";
 import { buildLeadEmail, buildMailto, leadSchema } from "@/lib/lead";
+import { isEmailConfigured, sendEmail } from "@/lib/email";
 
 const RATE_LIMIT = 5;
 const WINDOW_MS = 60_000;
@@ -53,9 +54,8 @@ export async function POST(request: Request) {
 
   const recipient = process.env.LEADS_TO_EMAIL || company.email;
   const mailto = buildMailto(payload, recipient);
-  const resendApiKey = process.env.RESEND_API_KEY;
 
-  if (!resendApiKey) {
+  if (!isEmailConfigured()) {
     return Response.json({
       ok: true,
       mailto,
@@ -63,48 +63,27 @@ export async function POST(request: Request) {
     });
   }
 
-  try {
-    const { subject, body } = buildLeadEmail(payload);
-    const response = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${resendApiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: process.env.LEADS_FROM_EMAIL || "Pure Drip <onboarding@resend.dev>",
-        to: [recipient],
-        reply_to: payload.email,
-        subject,
-        text: body,
-      }),
-    });
+  const { subject, body } = buildLeadEmail(payload);
+  const result = await sendEmail({
+    to: recipient,
+    replyTo: payload.email,
+    subject,
+    text: body,
+  });
 
-    if (!response.ok) {
-      console.error("[lead] resend non-ok", response.status, await response.text().catch(() => ""));
-      return Response.json(
-        {
-          ok: true,
-          mailto,
-          message: "Email delivery could not be confirmed. Open the prepared email fallback.",
-        },
-        { status: 202 },
-      );
-    }
-
-    return Response.json({
-      ok: true,
-      message: "Inquiry sent. We'll follow up within one business day.",
-    });
-  } catch (error) {
-    console.error("[lead] resend threw", error);
+  if (!result.ok) {
     return Response.json(
       {
         ok: true,
         mailto,
-        message: "Email delivery failed. Open the prepared email fallback.",
+        message: "Email delivery could not be confirmed. Open the prepared email fallback.",
       },
       { status: 202 },
     );
   }
+
+  return Response.json({
+    ok: true,
+    message: "Inquiry sent. We'll follow up within one business day.",
+  });
 }

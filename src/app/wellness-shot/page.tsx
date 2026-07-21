@@ -42,7 +42,7 @@ export default function WellnessShotPage() {
           <Reveal delay={0.1}>
             <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-surface-3">
               <Image
-                src={images.shot}
+                src={images.shotHero}
                 alt="A Pure Drip client holding up a wellness shot"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -59,7 +59,7 @@ export default function WellnessShotPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Menu"
-              title="The shot menu."
+              title="Explore our Wellness shots"
               italic="menu."
               summary="Each shot is administered by registered and licensed nurses with care and precision. Pre-order options are available as scheduling allows. Contact us to confirm availability."
             />

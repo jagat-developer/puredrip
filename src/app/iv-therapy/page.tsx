@@ -9,6 +9,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { TiltCard } from "@/components/tilt-card";
 import { company, images, ivBenefits, ivProcess, pageSeo } from "@/lib/site-data";
 import { buildMetadata } from "@/lib/seo";
+import { cn } from "@/lib/utils";
 
 export const metadata = buildMetadata(pageSeo["iv-therapy"]);
 
@@ -82,11 +83,15 @@ export default function IvTherapyPage() {
             title="Why Clients Choose IV Therapy"
           />
         </Reveal>
-        <div className="mt-16 grid gap-px overflow-hidden rounded-md border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-6">
           {ivBenefits.map((benefit, idx) => (
-            <Reveal key={benefit.title} delay={idx * 0.05}>
-              <TiltCard className="h-full" max={3}>
-                <article className="flex h-full flex-col gap-4 bg-background p-8">
+            <Reveal
+              key={benefit.title}
+              delay={idx * 0.05}
+              className={cn("lg:col-span-2", idx === 3 && "lg:col-start-2")}
+            >
+              <TiltCard className="h-full rounded-md" max={3}>
+                <article className="flex h-full flex-col gap-4 rounded-md border border-rule bg-background p-8">
                   <h3 className="font-serif text-2xl text-ink">{benefit.title}</h3>
                   <p className="text-sm font-light leading-7 text-ink-soft">{benefit.body}</p>
                 </article>
@@ -115,9 +120,9 @@ export default function IvTherapyPage() {
 
       <ImagePair
         eyebrow="Custom care"
-        title="The drip menu is built for you."
+        title="Every drip is built for you."
         italic="you."
-        body="Specific formulas are matched to your intake. If you have a target — recovery, glow, energy, immune support — tell us at booking and we'll bring the right combination. For specific drip availability and pricing, reach out and we'll share the current menu."
+        body="Specific formulas are matched to your intake. If you have a target — recovery, glow, energy, immune support — tell us at booking and we'll bring the right combination. For specific drip availability and pricing, reach out and we'll share what's currently available."
         image={images.team}
         imageAlt="A clinical close-up of a Pure Drip nurse preparing an IV infusion"
         reverse

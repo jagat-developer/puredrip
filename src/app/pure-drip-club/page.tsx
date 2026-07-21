@@ -73,7 +73,7 @@ export default function PureDripClubPage() {
           </div>
           <Reveal delay={0.2}>
             <p className="mx-auto mt-10 max-w-2xl text-center text-xs uppercase tracking-[0.28em] text-ink-mute">
-              Six-month minimum on all tiers · Pause anytime with two weeks&apos; notice
+              Six-month minimum on all tiers 
             </p>
           </Reveal>
         </div>
@@ -87,8 +87,7 @@ export default function PureDripClubPage() {
               Membership is not <em className="italic">occasional care.</em>
             </h2>
             <p className="mt-8 text-base font-light leading-8 text-ink-soft sm:text-lg">
-              It is structured wellness, designed around your lifestyle. Consistent. Elevated.
-              Personalised.
+              It is structured wellness, designed around your lifestyle. Consistent. Elevated. Personalised.
             </p>
           </Reveal>
         </div>

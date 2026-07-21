@@ -26,7 +26,7 @@ export const company: Company = {
   province: "Nova Scotia",
   partnerClinic: {
     name: "FLUID Multidisciplinary Health Clinic",
-    address: "Demone Street, Halifax, NS B3K 0G9",
+    address: "827 Bedford Hwy #204, Bedford, NS B4A 0J1",
     cadence: "In-clinic every second Wednesday & Saturday",
   },
   logo: "/images/logo.svg",
@@ -190,10 +190,10 @@ export const eventsProcess: ProcessStep[] = [
 ];
 
 export const eventDripCategories: DripCategory[] = [
-  { title: "Energy Boosters", body: "B-complex and amino blends for groups facing a long day, a launch, or a long flight." },
-  { title: "Recovery Drips", body: "Post-celebration formulas with anti-nausea and electrolyte rebalance — wedding mornings, corporate retreats." },
-  { title: "Immune Support", body: "High-dose vitamin C and zinc to keep the room well through winter travel, conferences, and shoots." },
-  { title: "Vitamin & Glow", body: "Glutathione, biotin, and antioxidant-led infusions — bridal parties, on-camera prep, milestone weekends." },
+  { title: "Energy Boosters", body: "Stay productive and clear-headed while partying or working." },
+  { title: "Recovery Drips", body: "Say goodbye to hangovers, jet lag, and fatigue." },
+  { title: "Immune Support Drips", body: "Stay healthy while celebrating or working." },
+  { title: "Vitamin & Glow Treatments", body: "Because wellness should always shine." },
 ];
 
 export const wellnessShots: WellnessShot[] = [
@@ -296,7 +296,7 @@ export const memberships: MembershipTier[] = [
 export const faqs: FaqItem[] = [
   {
     q: "Who administers the IV?",
-    a: "Every session is led by experienced nurses with pharmacist and clinical oversight, thoughtful clinical practices, and a focus on your safety and comfort. Every visit is delivered with attention to detail, professionalism, and the highest standards of care.",
+    a: "Every session is led by experienced nurses following thoughtful clinical practices, with a focus on your safety and comfort. Every visit is delivered with attention to detail, professionalism, and the highest standards of care.",
   },
   {
     q: "Where can you come?",
@@ -334,6 +334,7 @@ const FOUNDER_IMAGE = "/images/pure-drip-founder.jpg";
 const EVENT_IMAGE = "/images/pure-drip-event-session.jpg";
 const CLUB_IMAGE = "/images/pure-drip-club-comfort.jpg";
 const SHOT_IMAGE = "/images/pure-drip-wellness-shots.jpg";
+const SHOT_HERO_IMAGE = "/images/pure-drip-wellness-shot-hero.jpg";
 const LOCATION_IMAGE = "/images/pure-drip-brochures.jpg";
 
 export const images = {
@@ -347,6 +348,7 @@ export const images = {
   event: EVENT_IMAGE,
   club: CLUB_IMAGE,
   shot: SHOT_IMAGE,
+  shotHero: SHOT_HERO_IMAGE,
   location: LOCATION_IMAGE,
 };
 

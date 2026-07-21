@@ -20,8 +20,9 @@ export function localBusinessSchema() {
     address: {
       "@type": "PostalAddress",
       streetAddress: company.partnerClinic.address,
-      addressLocality: "Halifax",
+      addressLocality: "Bedford",
       addressRegion: "NS",
+      postalCode: "B4A 0J1",
       addressCountry: "CA",
     },
     areaServed: {

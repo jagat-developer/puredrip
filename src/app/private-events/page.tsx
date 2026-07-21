@@ -58,10 +58,10 @@ export default function PrivateEventsPage() {
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
         <Reveal>
           <SectionHeading
-            eyebrow="Menus by occasion"
-            title="A menu, matched to the moment."
-            italic="moment."
-            summary="We build the menu around what you'd like everyone to leave feeling — energised, recovered, glowing, or simply well."
+            eyebrow="For every occasion"
+            title="Options to suit your group."
+            italic="your group."
+            summary="We offer a wide range of options to suit your group's needs — from classic favorites to custom blends."
           />
         </Reveal>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

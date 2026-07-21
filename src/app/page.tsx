@@ -102,7 +102,9 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="font-serif fluid-h2 text-ink">
-              Luxury IV therapy, delivered wherever you are. Body restored. Mind renewed.
+              Luxury IV therapy, delivered wherever you are.
+              <br />
+              Body restored. Mind renewed.
             </h2>
           </Reveal>
         </div>
@@ -135,35 +137,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why choose Pure Drip — pillars as image pairs */}
-      <ImagePair
-        eyebrow="Why Pure Drip"
-        title="Recharge anywhere your day takes you."
-        italic="anywhere"
-        body="Home, office, hotel, or event. We bring the full clinic to your space, set up with the same sterile technique you&apos;d find in a hospital infusion suite. No commute, no waiting room, no recovery time afterward."
-        image={images.welcome}
-        imageAlt="A Pure Drip client relaxing during a mobile IV therapy session"
-      />
-      <ImagePair
-        eyebrow="Science-backed"
-        title="Pharmacy-grade formulas you can feel."
-        italic="feel."
-        body="Every formula is built on clinical evidence and dosed by a registered pharmacist. The B-complex and amino blends restore the metabolic supply your body actually runs on — not a caffeine spike that crashes by mid-afternoon."
-        image={images.science}
-        imageAlt="Branded Pure Drip IV infusion bags prepared on a stand"
-        reverse
-      />
-      <ImagePair
-        eyebrow="Custom wellness"
-        title="No two bodies are the same."
-        italic="same."
-        body="Every session begins with a short intake so the drip you receive is the drip your body needs. Recovery, energy, glow, immunity — the formula meets you where you are."
-        image={images.recovery}
-        imageAlt="A Pure Drip client relaxing with a branded comfort pillow during a treatment"
-      />
-
-      {/* Pillars (concise) */}
-      <section className="bg-surface-4 py-20 sm:py-28">
+      {/* Professional care — pillars as photo + text */}
+      <section className="pt-20 sm:pt-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal>
             <SectionHeading
@@ -172,18 +147,40 @@ export default function HomePage() {
               italic="trust,"
             />
           </Reveal>
-          <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-            {pillars.map((pillar, idx) => (
-              <Reveal key={pillar.title} delay={idx * 0.05}>
-                <div className="hairline pt-6">
-                  <h3 className="font-serif text-xl text-ink">{pillar.title}</h3>
-                  <p className="mt-4 text-sm font-light leading-7 text-ink-soft">{pillar.body}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
+      {[
+        {
+          italic: "Anywhere",
+          image: images.welcome,
+          imageAlt: "A Pure Drip client relaxing during a mobile IV therapy session at home",
+        },
+        {
+          italic: "Backed",
+          image: images.science,
+          imageAlt: "Branded Pure Drip IV infusion bags prepared on a stand",
+        },
+        {
+          italic: "Wellness",
+          image: images.recovery,
+          imageAlt: "A Pure Drip client relaxing with a branded comfort pillow during a treatment",
+        },
+        {
+          italic: "Care",
+          image: images.team,
+          imageAlt: "Close-up of a Pure Drip nurse administering IV therapy with sterile technique",
+        },
+      ].map((meta, idx) => (
+        <ImagePair
+          key={pillars[idx].title}
+          title={pillars[idx].title}
+          italic={meta.italic}
+          body={pillars[idx].body}
+          image={meta.image}
+          imageAlt={meta.imageAlt}
+          reverse={idx % 2 === 1}
+        />
+      ))}
 
       {/* Pure Drip Club teaser */}
       <section className="relative overflow-hidden bg-surface-deep text-ink-on-dark">

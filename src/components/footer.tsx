@@ -28,6 +28,11 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link className="transition hover:text-white" href="/blog">
+                  Blog
+                </Link>
+              </li>
             </ul>
           </div>
 
