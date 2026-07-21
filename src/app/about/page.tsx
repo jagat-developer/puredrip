@@ -44,7 +44,7 @@ export default function AboutPage() {
         italic="care."
         body="Pure Drip is supported by a team of healthcare professionals, including registered nurses and licensed practical nurses, with clinical oversight from a registered pharmacist. Our team brings experience from healthcare settings and follows thoughtful screening, safe practices, and professional standards to deliver a comfortable, personalized IV therapy experience. Every visit is guided by patient safety, clinical care, and attention to detail from start to finish."
         image={images.science}
-        imageAlt="A clinical close-up reflecting Pure Drip's pharmacy-grade standards"
+        imageAlt="Branded Pure Drip IV infusion bags reflecting the brand's pharmacy-grade standards"
       />
 
       <section className="bg-surface-4 py-24 sm:py-32">

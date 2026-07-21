@@ -43,7 +43,7 @@ export default function WellnessShotPage() {
             <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-surface-3">
               <Image
                 src={images.shot}
-                alt="Wellness shots prepared on a clean surface"
+                alt="A Pure Drip client holding up a wellness shot"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

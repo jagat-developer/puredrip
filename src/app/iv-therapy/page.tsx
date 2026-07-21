@@ -119,7 +119,7 @@ export default function IvTherapyPage() {
         italic="you."
         body="Specific formulas are matched to your intake. If you have a target — recovery, glow, energy, immune support — tell us at booking and we'll bring the right combination. For specific drip availability and pricing, reach out and we'll share the current menu."
         image={images.team}
-        imageAlt="A Pure Drip treatment close-up with branded comfort pillow"
+        imageAlt="A clinical close-up of a Pure Drip nurse preparing an IV infusion"
         reverse
       />
 

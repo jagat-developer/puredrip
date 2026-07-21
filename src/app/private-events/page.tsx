@@ -18,7 +18,7 @@ export default function PrivateEventsPage() {
         <div className="absolute inset-0">
           <Image
             src={images.event}
-            alt="Two clients relaxing together during a Pure Drip mobile IV session"
+            alt="A group of clients toasting together during a Pure Drip private event IV session"
             fill
             sizes="100vw"
             className="object-cover opacity-50"

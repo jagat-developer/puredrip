@@ -159,7 +159,7 @@ export default function HomePage() {
         italic="same."
         body="Every session begins with a short intake so the drip you receive is the drip your body needs. Recovery, energy, glow, immunity — the formula meets you where you are."
         image={images.recovery}
-        imageAlt="A Pure Drip client relaxing in a robe during a treatment"
+        imageAlt="A Pure Drip client relaxing with a branded comfort pillow during a treatment"
       />
 
       {/* Pillars (concise) */}
@@ -224,7 +224,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src={images.glow}
-            alt="A Pure Drip Glow infusion bag"
+            alt="A Pure Drip client relaxing in a robe during a Glow infusion session"
             fill
             sizes="100vw"
             className="object-cover opacity-40"
