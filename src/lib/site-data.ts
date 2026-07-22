@@ -102,7 +102,7 @@ export const pillars: Pillar[] = [
   },
   {
     title: "Science-Backed",
-    body: "Every treatment is designed with carefully selected, high-quality ingredients and guided by current clinical evidence to help you feel your best.",
+    body: "Every Personalised treatment features thoughtfully sourced IV bags, high quality ingredients and  guided by current clinical evidence to help you feel your best.",
   },
   {
     title: "Custom Wellness",
@@ -147,7 +147,7 @@ export const ivProcess: ProcessStep[] = [
   {
     index: "03",
     title: "Personalized consultation",
-    body: "Your nurse will review your intake, answer any questions, and help tailor your treatment to align with your wellness goals.",
+    body: "Your health history and intake will be reviewed by our clinical team under medical oversight to ensure your treatment is appropriate, safe, and tailored to your health status and wellness goals.",
   },
   {
     index: "04",
@@ -222,16 +222,10 @@ export const wellnessShots: WellnessShot[] = [
     slug: "metabolic",
     name: "Metabolic",
     price: "$55",
-    blurb: "MIC and B-complex blend that supports fat metabolism and steady, sustained energy.",
+    blurb: "MIC blend that supports fat metabolism and steady, sustained energy.",
     available: "preorder",
   },
-  {
-    slug: "biotin",
-    name: "Biotin",
-    price: "$55",
-    blurb: "Hair, skin, and nails — high-dose biotin delivered straight to where it works.",
-    available: "preorder",
-  },
+  
   {
     slug: "nad",
     name: "NAD+",
@@ -325,20 +319,22 @@ export const faqs: FaqItem[] = [
 ];
 
 const HERO_IMAGE = "/images/pure-drip-hero-session.jpg";
+const HERO_LANDING_IMAGE = "/images/pure-drip-hero-cheers.jpg";
 const WELCOME_IMAGE = "/images/pure-drip-welcome-session.jpg";
 const SCIENCE_IMAGE = "/images/pure-drip-iv-bags.jpg";
 const RECOVERY_IMAGE = "/images/pure-drip-recovery-client.jpg";
 const GLOW_IMAGE = "/images/pure-drip-glow-infusion.jpg";
 const TEAM_IMAGE = "/images/pure-drip-treatment-closeup.jpg";
-const FOUNDER_IMAGE = "/images/pure-drip-founder.jpg";
+const FOUNDER_IMAGE = "/images/pure-drip-founder.jpeg";
 const EVENT_IMAGE = "/images/pure-drip-event-session.jpg";
 const CLUB_IMAGE = "/images/pure-drip-club-comfort.jpg";
-const SHOT_IMAGE = "/images/pure-drip-wellness-shots.jpg";
+const SHOT_IMAGE = "/images/pure-drip-wellness-shots.jpeg";
 const SHOT_HERO_IMAGE = "/images/pure-drip-wellness-shot-hero.jpg";
 const LOCATION_IMAGE = "/images/pure-drip-brochures.jpg";
 
 export const images = {
   hero: HERO_IMAGE,
+  heroLanding: HERO_LANDING_IMAGE,
   welcome: WELCOME_IMAGE,
   science: SCIENCE_IMAGE,
   recovery: RECOVERY_IMAGE,

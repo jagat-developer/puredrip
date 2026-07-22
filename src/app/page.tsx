@@ -42,8 +42,8 @@ export default function HomePage() {
       <section className="relative isolate flex min-h-[100svh] items-end overflow-hidden bg-surface-deep pt-[var(--header-height)]">
         <div className="absolute inset-0">
           <Image
-            src={images.hero}
-            alt="Two Pure Drip clients relaxing during a mobile IV therapy session"
+            src={images.heroLanding}
+            alt="Two Pure Drip clients toasting with tea during a mobile IV therapy session"
             fill
             priority
             sizes="100vw"
@@ -157,8 +157,8 @@ export default function HomePage() {
         },
         {
           italic: "Backed",
-          image: images.science,
-          imageAlt: "Branded Pure Drip IV infusion bags prepared on a stand",
+          image: images.shot,
+          imageAlt: "A Pure Drip client holding a wellness shot formulated with high-quality ingredients",
         },
         {
           italic: "Wellness",
