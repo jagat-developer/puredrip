@@ -271,7 +271,7 @@ export const memberships: MembershipTier[] = [
   {
     slug: "elite-longevity",
     name: "Elite Longevity",
-    price: "$315",
+    price: "$349",
     cadence: "per month",
     emphasis: "elite",
     tagline: "Premium care for high performers who treat wellness as essential.",
