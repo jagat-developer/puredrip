@@ -10,6 +10,11 @@ const nextConfig: NextConfig = {
     root: appDir,
   },
   images: {
+    // Source images in /public/images are pre-sized and compressed at build
+    // time, so we serve them straight from the CDN instead of going through
+    // the hosted image optimizer (which is metered and returns 402 once the
+    // transformation quota runs out, leaving broken images on the page).
+    unoptimized: true,
     remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }],
   },
 };
