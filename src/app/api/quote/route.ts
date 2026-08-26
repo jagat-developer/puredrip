@@ -1,6 +1,7 @@
 import { company } from "@/lib/site-data";
 import { buildLeadEmail, buildMailto, leadSchema } from "@/lib/lead";
 import { isEmailConfigured, sendEmail } from "@/lib/email";
+import { verifyTurnstile } from "@/lib/turnstile";
 
 const RATE_LIMIT = 5;
 const WINDOW_MS = 60_000;
@@ -35,10 +36,47 @@ export async function POST(request: Request) {
     );
   }
 
+  let requestBody: unknown;
+
+  try {
+    requestBody = await request.json();
+  } catch (error) {
+    console.error("[lead] malformed request body", error);
+    return Response.json(
+      { ok: false, message: "Please check the required fields and try again." },
+      { status: 400 },
+    );
+  }
+
+  // Turnstile is checked before validation, email, or any other side effect.
+  const token =
+    typeof (requestBody as { turnstileToken?: unknown })?.turnstileToken === "string"
+      ? (requestBody as { turnstileToken: string }).turnstileToken
+      : "";
+
+  let verified: boolean;
+
+  try {
+    verified = await verifyTurnstile(token, key === "anonymous" ? undefined : key);
+  } catch (error) {
+    console.error("[lead] turnstile is not configured", error);
+    return Response.json(
+      { ok: false, message: "Something went wrong. Please call us directly." },
+      { status: 500 },
+    );
+  }
+
+  if (!verified) {
+    return Response.json(
+      { ok: false, message: "Verification failed. Please try again." },
+      { status: 400 },
+    );
+  }
+
   let payload;
 
   try {
-    payload = leadSchema.parse(await request.json());
+    payload = leadSchema.parse(requestBody);
   } catch (error) {
     console.error("[lead] validation failed", error);
     return Response.json(

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Send } from "lucide-react";
 import type { LeadSubmission } from "@/lib/types";
 import { INTENT_OPTIONS } from "@/lib/lead";
+import { TurnstileWidget, isTurnstileEnabled } from "@/components/turnstile-widget";
 
 type Stage = "form" | "submitting" | "success" | "error";
 
@@ -24,6 +25,8 @@ export function QuoteForm() {
   const [consent, setConsent] = useState(false);
   const [message, setMessage] = useState("");
   const [mailtoFallback, setMailtoFallback] = useState<string | null>(null);
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [turnstileReset, setTurnstileReset] = useState(0);
 
   function update<K extends keyof LeadSubmission>(key: K, value: LeadSubmission[K]) {
     setForm((current) => ({ ...current, [key]: value }));
@@ -35,6 +38,10 @@ export function QuoteForm() {
       setMessage("Please confirm consent so we can reply.");
       return;
     }
+    if (isTurnstileEnabled && !turnstileToken) {
+      setMessage("Please complete the verification check so we can reply.");
+      return;
+    }
     setStage("submitting");
     setMessage("");
     setMailtoFallback(null);
@@ -43,7 +50,7 @@ export function QuoteForm() {
       const response = await fetch("/api/quote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, caslConsent: true }),
+        body: JSON.stringify({ ...form, caslConsent: true, turnstileToken }),
       });
       const result = (await response.json()) as { ok?: boolean; mailto?: string; message?: string };
 
@@ -59,6 +66,11 @@ export function QuoteForm() {
     } catch (error) {
       setStage("error");
       setMessage(error instanceof Error ? error.message : "Something went wrong. Please call us directly.");
+    } finally {
+      // Turnstile tokens are single-use, so clear this one and ask for a fresh
+      // widget challenge whether the submit succeeded or failed.
+      setTurnstileToken("");
+      setTurnstileReset((count) => count + 1);
     }
   }
 
@@ -83,6 +95,11 @@ export function QuoteForm() {
   }
 
   const submitting = stage === "submitting";
+  const disableReason = !consent
+    ? "Please confirm consent so we can reply."
+    : isTurnstileEnabled && !turnstileToken
+      ? "Please complete the verification check so we can reply."
+      : null;
 
   return (
     <form onSubmit={submit} className="grid gap-3" aria-label="Pure Drip inquiry">
@@ -184,14 +201,29 @@ export function QuoteForm() {
         </span>
       </label>
 
+      <TurnstileWidget
+        onVerify={setTurnstileToken}
+        onExpire={() => setTurnstileToken("")}
+        onError={() => setTurnstileToken("")}
+        resetSignal={turnstileReset}
+        action="inquiry"
+      />
+
       <button
         type="submit"
-        disabled={submitting || !consent}
+        disabled={submitting || Boolean(disableReason)}
+        aria-describedby={disableReason ? "inquiry-submit-hint" : undefined}
         className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-ink px-5 text-sm font-medium text-background transition hover:bg-accent disabled:cursor-not-allowed disabled:opacity-60"
       >
         <Send className="h-4 w-4" aria-hidden="true" />
         {submitting ? "Sending…" : "Send inquiry"}
       </button>
+
+      {disableReason ? (
+        <p id="inquiry-submit-hint" className="text-xs font-light leading-5 text-ink-soft">
+          {disableReason}
+        </p>
+      ) : null}
 
       {message ? (
         <p
